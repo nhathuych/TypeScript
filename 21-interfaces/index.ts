@@ -10,3 +10,20 @@ function showStrength(empire: IEmpire) {
 }
 
 console.log(showStrength(mightyAmerica))
+console.log("------------------------------------------------------------------\n")
+
+
+
+class GloriousEmpire implements IEmpire {
+
+  constructor(public name: string, public population: number, public area: number) {
+  }
+
+  strength(): string {
+    return `The strength of ${this.name} is ${this.population.toLocaleString()} people, covering ${this.area.toLocaleString()} km².`
+  }
+}
+
+let legendaryRome: GloriousEmpire = new GloriousEmpire("Rome", 69_000_000, 5_500_000)
+console.log(legendaryRome.strength())
+console.log("------------------------------------------------------------------\n")
